@@ -1,2 +1,2 @@
 release: python manage.py migrate
-web: gunicorn commentreview.wsgi --log-file -
+web: gunicorn djangoci.wsgi --log-file -
