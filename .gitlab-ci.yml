@@ -35,7 +35,7 @@ production:
   script:
     - apt update -qy
     - apt install -y snapd
-    - snapd install doctl
+    - snap install doctl
     - doctl auth init --access-token $DIGITAL_OCEAN_ACCESS_TOKEN
     - doctl compute ssh $USER@$DROPLET_NAME --ssh-command "cd $BASE_DIR && git clone $CI_REPOSITORY_URL"
     - doctl compute ssh $USER@$DROPLET_NAME --ssh-command "cd $BASE_DIR/$CI_PROJECT_NAME && git pull $REMOTE master"
